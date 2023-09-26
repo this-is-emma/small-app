@@ -4,7 +4,7 @@ import os
 
 load_dotenv()
 def getToDo():
-    conn = psycopg2.connect(dbname="postgres", user="postgres", password="postgres", host=HOST)
+    conn = psycopg2.connect(dbname="postgres", user="postgres", password="postgres", host="5432")
     cur = conn.cursor()
     cur.execute('SELECT todo_name, is_active FROM public."ToDo"')
     todo = cur.fetchall()
